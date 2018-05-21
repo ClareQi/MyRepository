@@ -1,0 +1,120 @@
+
+package NSOCR;
+
+public interface Constant
+{
+  public final static int BT_DEFAULT             = 0;
+  public final static int BT_OCRTEXT             = 1;
+  public final static int BT_ICRDIGIT            = 2;
+  public final static int BT_CLEAR               = 3;
+  public final static int BT_PICTURE             = 4;
+  public final static int BT_ZONING              = 5;
+  public final static int BT_OCRDIGIT            = 6;
+  public final static int BT_BARCODE             = 7;
+  public final static int BT_TABLE               = 8;
+  public final static int BT_MRZ                 = 9;
+  public final static int BMP_24BIT              = 0x00;
+  public final static int BMP_8BIT               = 0x01;
+  public final static int BMP_1BIT               = 0x02;
+  public final static int BMP_32BIT		 = 0x03;
+  public final static int BMP_BOTTOMTOP          = 0x100;
+  public final static int FMT_EDITCOPY           = 0x00;
+  public final static int FMT_EXACTCOPY          = 0x01;
+  public final static int OCRSTEP_FIRST          = 0x00;
+  public final static int OCRSTEP_PREFILTERS     = 0x10;
+  public final static int OCRSTEP_BINARIZE       = 0x20;
+  public final static int OCRSTEP_POSTFILTERS    = 0x50;
+  public final static int OCRSTEP_REMOVELINES    = 0x60;
+  public final static int OCRSTEP_ZONING         = 0x70;
+  public final static int OCRSTEP_OCR            = 0x80;
+  public final static int OCRSTEP_LAST           = 0xFF;
+  public final static int OCRFLAG_NONE           = 0x00;
+  public final static int OCRFLAG_THREAD         = 0x01;
+  public final static int OCRFLAG_GETRESULT      = 0x02;
+  public final static int OCRFLAG_GETPROGRESS    = 0x03;
+  public final static int OCRFLAG_CANCEL         = 0x04;
+  public final static int DRAW_NORMAL            = 0x00;
+  public final static int DRAW_BINARY            = 0x01;
+  public final static int DRAW_GETBPP            = 0x100;
+  public final static int BLK_INVERSE_GET        = -1;
+  public final static int BLK_INVERSE_SET0       = 0;
+  public final static int BLK_INVERSE_SET1       = 1;
+  public final static int BLK_INVERSE_DETECT     = 0x100;
+  public final static int BLK_ROTATE_GET         = -1;
+  public final static int BLK_ROTATE_NONE        = 0x00;
+  public final static int BLK_ROTATE_90          = 0x01;
+  public final static int BLK_ROTATE_180         = 0x02;
+  public final static int BLK_ROTATE_270         = 0x03;
+  public final static int BLK_ROTATE_ANGLE       = 0x100000;
+  public final static int BLK_ROTATE_DETECT      = 0x100;
+  public final static int BLK_MIRROR_GET         = -1;
+  public final static int BLK_MIRROR_NONE        = 0x00;
+  public final static int BLK_MIRROR_H           = 0x01;
+  public final static int BLK_MIRROR_V           = 0x02;
+  public final static int SVR_FORMAT_PDF         = 0x01;
+  public final static int SVR_FORMAT_RTF         = 0x02;
+  public final static int SVR_FORMAT_TXT_ASCII   = 0x03;
+  public final static int SVR_FORMAT_TXT_UNICODE = 0x04;
+  public final static int SVR_FORMAT_XML         = 0x05;
+  public final static int SVR_FORMAT_PDFA        = 0x06;
+  public final static int SCAN_GETDEFAULTDEVICE  = 0x01;
+  public final static int SCAN_SETDEFAULTDEVICE  = 0x100;
+  public final static int SCAN_NOUI              = 0x01;
+  public final static int SCAN_SOURCEADF         = 0x02;
+  public final static int SCAN_SOURCEAUTO        = 0x04;
+  public final static int SCAN_DONTCLOSEDS       = 0x08;
+  public final static int SCAN_FILE_SEPARATE     = 0x10;  
+  public final static int FONT_STYLE_UNDERLINED  = 0x01;
+  public final static int FONT_STYLE_STRIKED     = 0x02;
+  public final static int FONT_STYLE_BOLD        = 0x04;
+  public final static int FONT_STYLE_ITALIC      = 0x08;
+  public final static int IMG_PROP_DPIX          = 0x01;
+  public final static int IMG_PROP_DPIY          = 0x02;
+  public final static int IMG_PROP_BPP           = 0x03;
+  public final static int IMG_PROP_WIDTH         = 0x04;
+  public final static int IMG_PROP_HEIGHT        = 0x05;
+  public final static int IMG_PROP_INVERTED      = 0x06;   //image was inverted at OCR_STEP_PREFILTERS  
+  public final static int IMG_PROP_SKEW          = 0x07;   //image skew angle after OCR_STEP_PREFILTERS step, multiplied by 1000
+  public final static int IMG_PROP_SCALE         = 0x08;   //image scale factor after OCR_STEP_PREFILTERS step, multiplied by 1000  
+  public final static int IMG_PROP_PAGEINDEX     = 0x09;   //image page index
+  public final static int REGEX_SET              = 0x00;
+  public final static int REGEX_CLEAR            = 0x01;
+  public final static int REGEX_CLEAR_ALL        = 0x02;
+  public final static int REGEX_DISABLE_DICT     = 0x04;
+  public final static int REGEX_CHECK		 = 0x08;
+  public final static int INFO_PDF_AUTHOR	 = 0x01;
+  public final static int INFO_PDF_CREATOR	 = 0x02;
+  public final static int INFO_PDF_PRODUCER	 = 0x03;
+  public final static int INFO_PDF_TITLE	 = 0x04;
+  public final static int INFO_PDF_SUBJECT	 = 0x05;
+  public final static int INFO_PDF_KEYWORDS	 = 0x06;   
+  public final static int BARCODE_TYPE_EAN8	 = 0x0001;
+  public final static int BARCODE_TYPE_UPCE	 = 0x0002;
+  public final static int BARCODE_TYPE_ISBN10	 = 0x0003;
+  public final static int BARCODE_TYPE_UPCA	 = 0x0004;
+  public final static int BARCODE_TYPE_EAN13	 = 0x0005;
+  public final static int BARCODE_TYPE_ISBN13	 = 0x0006;
+  public final static int BARCODE_TYPE_ZBAR_I25	 = 0x0007;
+  public final static int BARCODE_TYPE_CODE39	 = 0x0008;
+  public final static int BARCODE_TYPE_QRCODE	 = 0x0009;
+  public final static int BARCODE_TYPE_CODE128	 = 0x000A;   
+  
+  //for Img_SaveToFile function
+  public final static int IMG_FORMAT_BMP        =  0;
+  public final static int IMG_FORMAT_JPEG       =  2;
+  public final static int IMG_FORMAT_PNG        = 13;
+  public final static int IMG_FORMAT_TIFF       = 18;
+  
+  // for "BarCode/TypesMask" configuration option
+  public final static int BARCODE_TYPE_MASK_EAN8     = 0x01;
+  public final static int BARCODE_TYPE_MASK_UPCE     = 0x02;
+  public final static int BARCODE_TYPE_MASK_ISBN10   = 0x04;
+  public final static int BARCODE_TYPE_MASK_UPCA     = 0x08;
+  public final static int BARCODE_TYPE_MASK_EAN13    = 0x10;
+  public final static int BARCODE_TYPE_MASK_ISBN13   = 0x20;
+  public final static int BARCODE_TYPE_MASK_ZBAR_I25 = 0x40;
+  public final static int BARCODE_TYPE_MASK_CODE39   = 0x80;
+  public final static int BARCODE_TYPE_MASK_QRCODE   = 0x100;
+  public final static int BARCODE_TYPE_MASK_CODE128  = 0x200;
+  
+}
